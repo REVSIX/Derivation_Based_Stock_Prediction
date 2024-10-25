@@ -1,3 +1,5 @@
+
+---
 # Derivation Based Stock Prediction
 
 ## Table of Contents
@@ -8,6 +10,7 @@
 - [Usage](#usage)
 - [How It Works](#how-it-works)
 - [Upcoming Features](#upcoming-features)
+- [Test Results](#test-results)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
@@ -21,10 +24,10 @@ Derivation Based Stock Prediction is a Python-based application that fetches rea
 - Stores historical price data in CSV format for analysis.
 - User-friendly interface for entering stock tickers.
 - Supports multiple stocks and maintains a moving window of recent prices.
-- (Upcoming) Performs regression analysis on historical data.
-- (Upcoming) Calculates derivatives for trend analysis.
-- (Upcoming) Identifies local maxima and minima using horizontal tangent lines.
-- (Upcoming) Analyzes concavity using second derivatives.
+- Performs regression analysis on historical data.
+- Calculates derivatives for trend analysis.
+- Identifies local maxima and minima using horizontal tangent lines.
+- Analyzes concavity using second derivatives.
 
 ## Technologies Used
 - **Python**: The primary programming language used for development.
@@ -59,7 +62,7 @@ To get started with this project, follow these steps:
 To run the application, execute the following command in your terminal:
 
 ```bash
-python upcomingfile.py  # TODO Replace this with an actual release
+python scripts/main.py  # Ensure to replace with the actual script name if different
 ```
 
 Follow the prompts to enter a valid stock ticker symbol (e.g., AAPL for Apple Inc.). The application will fetch real-time prices and update a CSV file located in the `stock_data` directory.
@@ -69,17 +72,19 @@ Follow the prompts to enter a valid stock ticker symbol (e.g., AAPL for Apple In
 2. It checks if it's a valid trading day and within market hours.
 3. If valid, it fetches the latest stock price from the Finnhub API.
 4. The price data is stored in a CSV file, maintaining a moving window of recent prices.
-5. (Upcoming) The application will perform regression analysis on the historical data.
-6. (Upcoming) It will calculate derivatives to analyze trends and identify critical points.
-7. (Upcoming) Local maxima and minima will be identified using horizontal tangent lines.
-8. (Upcoming) Concavity analysis will be performed using second derivatives.
+5. The application performs regression analysis on the historical data.
+6. It calculates derivatives to analyze trends and identify critical points.
+7. Local maxima and minima are identified using horizontal tangent lines.
+8. Concavity analysis is performed using second derivatives.
 
 ## Upcoming Features
-- Regression analysis for trend prediction
-- Derivative calculations for identifying critical points
-- Identification of local maxima and minima
-- Concavity analysis using second derivatives
-- Advanced visualization of stock trends and predictions
+- Advanced visualization of stock trends and predictions.
+- Integration of Jupyter notebook code into the main script for improved functionality.
+- Enhanced user interface for better interaction and experience.
+- Additional metrics for stock performance evaluation.
+
+## Test Results
+- Test results will be added here as the project progresses, detailing the accuracy and performance of predictions made by the application.
 
 ## Contributing
 Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
@@ -107,4 +112,5 @@ For inquiries or feedback, please reach out to:
 
 - **Raunak Verma**: [raunak@pankul.com](mailto:raunak@pankul.com)
 - **GitHub**: [REVSIX on Github](https://github.com/REVSIX)
-```
+
+--- 
