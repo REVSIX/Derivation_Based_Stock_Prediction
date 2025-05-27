@@ -1,5 +1,6 @@
 import logging
 import time
+import pandas as pd
 import numpy as np
 from datetime import datetime
 from utils  import storage, calc, time as time_util  # Import the time utility
@@ -12,10 +13,13 @@ def run_daily():
     recent_csv_file = 'recent_stock_data.csv'
     historical_csv_file = 'historical_stock_data.csv'
     window_size = 30  # For the recent data window
-
-    # Load current stock data from the CSV file
-    stock_data = storage.load_or_initialize_csv(recent_csv_file)
-
+    
+    # Initialize or load existing recent data CSV file
+    try:
+        stock_data = pd.read_csv(recent_csv_file)
+    except FileNotFoundError:
+        stock_data = pd.DataFrame(columns=["Datetime", "Price"])
+    
     # Update the stock data with the latest price only if it's trading time
     if time_util.is_trading_time():
         stock_data = storage.update_csv(stock_data, recent_csv_file, historical_csv_file, ticker, window_size)
