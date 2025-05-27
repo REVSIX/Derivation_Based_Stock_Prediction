@@ -30,7 +30,7 @@ def run_daily():
             y = stock_data['Price'].values  # Prices as y-values
 
             # Fit a polynomial regression model to the data
-            degree = 3  # Degree of the polynomial
+            degree = 4  # Degree of the polynomial
             coeffs, p, mse = calc.fit_and_evaluate(x, y, degree)
             
             # Compute derivatives (slopes) to find local minima and maxima
