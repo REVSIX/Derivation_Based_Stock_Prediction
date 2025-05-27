@@ -36,10 +36,9 @@ def update_csv(stock_data, recent_csv_file, historical_csv_file, ticker, window_
 
     return stock_data
 
-def get_valid_csv_filename():
+def get_valid_csv_filename(ticker):
     while True:
-        base_filename = input("Enter the base name of the CSV file (without .csv extension): ")
-        filename = f"{base_filename}.csv"
+        filename = f"{ticker}.csv"
         
         current_dir = os.getcwd()
         parent_dir = os.path.dirname(current_dir)

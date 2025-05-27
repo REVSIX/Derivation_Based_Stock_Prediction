@@ -12,6 +12,7 @@ def run_daily():
     ticker = 'LCID'
     recent_csv_file = 'recent_stock_data.csv'
     historical_csv_file = 'historical_stock_data.csv'
+    portfolio_csv_file = 'portfolio.csv'
     window_size = 30  # For the recent data window
     
     # Initialize or load existing recent data CSV file
@@ -46,10 +47,11 @@ def run_daily():
                     # If local minimum and price is in lower 25%, buy
                     if y_extremum < min(y) + 0.25 * (max(y) - min(y)):
                         logging.info(f"Action: BUY at {y_extremum} - Local minimum detected.")
+                        buy_price = y_extremum
                         # Call a function to execute the buy action here
                 elif extremum_type == "Maximum":
                     # If local maximum and price has increased by 20%, sell
-                    if y_extremum > max(y) * 1.2:
+                    if y_extremum >= buy_price * 1.2:
                         logging.info(f"Action: SELL at {y_extremum} - Local maximum detected.")
                         # Call a function to execute the sell action here
                 else:
