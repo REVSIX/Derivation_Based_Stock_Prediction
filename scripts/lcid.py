@@ -12,7 +12,6 @@ def run_daily():
     ticker = 'LCID'
     recent_csv_file = 'recent_stock_data.csv'
     historical_csv_file = 'historical_stock_data.csv'
-    portfolio_csv_file = 'portfolio.csv'
     window_size = 30  # For the recent data window
     
     # Initialize or load existing recent data CSV file
